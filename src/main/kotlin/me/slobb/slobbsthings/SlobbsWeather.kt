@@ -3,12 +3,7 @@ package me.slobb.slobbsthings
 import me.slobb.slobbsthings.Listener.EffectListener
 import me.slobb.slobbsthings.Listener.SeasonWeatherPlayerListener
 import me.slobb.slobbsthings.Listener.WeatherEventListener
-import me.slobb.slobbsthings.commands.SetSeasonCommand
-import me.slobb.slobbsthings.commands.SetSeasonDayCommand
-import me.slobb.slobbsthings.commands.SetYearCommand
-import me.slobb.slobbsthings.commands.ToggleDayWeatherCommand
-import me.slobb.slobbsthings.commands.ToggleNightWeatherCommand
-import me.slobb.slobbsthings.commands.SetSeasonLengthCommand
+import me.slobb.slobbsthings.commands.*
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -16,7 +11,10 @@ class SlobbsWeather : JavaPlugin() {
 //https://www.youtube.com/watch?v=zGFR6G9FHLk&list=PL3Cdwhu_4crm-taHKMt9PDZ0zQn5U6o-y&index=2
     override fun onEnable() {
         println("SlobbsThings is now loading...")
+
         saveDefaultConfig()
+        val worldName = Bukkit.getWorlds().get(0).getName()
+        config.set("world", worldName)
 
         Bukkit.getPluginManager().registerEvents(SeasonWeatherPlayerListener(this), this)
         Bukkit.getPluginManager().registerEvents(EffectListener(this), this)
@@ -30,7 +28,6 @@ class SlobbsWeather : JavaPlugin() {
         getCommand("togglenightweather")!!.setExecutor(ToggleNightWeatherCommand(this))
 
         println("SlobbsThings is now enabled! KILL THEM ALL! ---------------------------------------")
-
 
     }
 }
