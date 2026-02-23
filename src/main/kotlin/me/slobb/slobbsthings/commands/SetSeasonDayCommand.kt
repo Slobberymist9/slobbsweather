@@ -1,13 +1,13 @@
 package me.slobb.slobbsthings.commands
 
-import me.slobb.slobbsthings.SlobbsThings
+import me.slobb.slobbsthings.SlobbsWeather
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 
-class SetSeasonDayCommand(val slobbsThings: SlobbsThings) : CommandExecutor {
+class SetSeasonDayCommand(val slobbsWeather: SlobbsWeather) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
-        val config = slobbsThings.config
+        val config = slobbsWeather.config
         if (args.size != 1) {
             sender.sendPlainMessage("Please enter a whole number.")
             return false
@@ -18,7 +18,7 @@ class SetSeasonDayCommand(val slobbsThings: SlobbsThings) : CommandExecutor {
             if (days.toInt() > 0 && days.toInt() < config.getInt("season-length") && sender.isOp) {
                 config.set("day", days.toInt())
                 sender.sendPlainMessage("Set the season day to day $days out of $length for this season.")
-                slobbsThings.saveConfig()
+                slobbsWeather.saveConfig()
             } else if (days.toInt() < 0 && sender.isOp || days.toInt() > config.getInt("season-length") && sender.isOp) {
                 sender.sendPlainMessage("Please enter a number greater than 0, or make sure the number you entered is less than the current season length, which is at $length days long!")
                 return false

@@ -1,7 +1,9 @@
 # WEATHER EVENTS
 year: 1
-season: 'spring'
 day: 1
+season: 'spring'
+current-weather-event-day: 'Clear'
+current-weather-event-night: 'Clear'
 season-length: 30
 day-weather: true
 night-weather: true

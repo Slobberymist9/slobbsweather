@@ -1,12 +1,12 @@
 package me.slobb.slobbsthings.commands
 
-import me.slobb.slobbsthings.SlobbsThings
+import me.slobb.slobbsthings.SlobbsWeather
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import java.util.Locale
 
-class SetSeasonCommand(val slobbsThings: SlobbsThings) : CommandExecutor {
+class SetSeasonCommand(val slobbsWeather: SlobbsWeather) : CommandExecutor {
     /*
     bs for me since i suck at coding:
     setseason (Sp Su F W)
@@ -17,7 +17,7 @@ class SetSeasonCommand(val slobbsThings: SlobbsThings) : CommandExecutor {
      */
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
-        val config = slobbsThings.config
+        val config = slobbsWeather.config
         if (args.size != 1) {
             sender.sendPlainMessage("You need to specify a season to change it to. (Spring, Summer, Fall, Winter")
             return false
