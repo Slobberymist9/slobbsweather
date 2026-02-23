@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class SlobbsThings : JavaPlugin() {
 //https://www.youtube.com/watch?v=zGFR6G9FHLk&list=PL3Cdwhu_4crm-taHKMt9PDZ0zQn5U6o-y&index=2
+    //githiub commit
     override fun onEnable() {
         println("SlobbsThings is now loading...")
         saveDefaultConfig()
