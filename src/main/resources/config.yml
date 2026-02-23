@@ -1,0 +1,56 @@
+# WEATHER EVENTS
+year: 1
+season: 'spring'
+day: 1
+season-length: 30
+day-weather: true
+night-weather: true
+weather-events-day:
+  spring:
+    - 'Clear'
+    - 'Rain'
+    - 'Sunny'
+    - 'Windy'
+    - 'Hot'
+    - 'Eclipsed'
+    - 'Paranoid'
+    - 'Slime'
+    - 'Gale'
+    - 'Beautiful'
+  summer:
+    - 'Clear'
+    - 'Rain'
+    - 'Thunder'
+    - 'Sunny'
+    - 'Hot'
+    - 'Eclipsed'
+    - 'Paranoid'
+    - 'Inferno'
+    - 'Perfect'
+  fall:
+    - 'Clear'
+    - 'Rain'
+    - 'Thunder'
+    - 'Windy'
+    - 'Cold'
+    - 'Eclipsed'
+    - 'Paranoid'
+    - 'Monsoon'
+    - 'Cozy'
+  winter:
+    - 'Clear'
+    - 'Snowy'
+    - 'Cold'
+    - 'Eclipsed'
+    - 'Paranoid'
+    - 'Arctic'
+    - 'Brisk'
+
+weather-events-night:
+  - 'Clear'
+  - 'Rain'
+  - 'Thunder'
+  - 'Spooky'
+  - 'BloodMoon'
+  - 'BlueMoon'
+  - 'HarvestMoon'

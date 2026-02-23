@@ -1,0 +1,19 @@
+name: slobbsthings
+version: '1.1-SNAPSHOT'
+main: me.slobb.slobbsthings.SlobbsThings
+api-version: '1.21'
+authors: [ _Slobb_ ]
+description: Items i make
+commands:
+  setseason:
+    description: Sets the season, spring, summer, fall, or winter.
+  setseasonday:
+    description: Sets the day of the current season, default starts on spring
+  setseasonlength:
+    description: Sets how long you want the season to last in minecraft days (default is 30, or 10 hours)
+  setyear:
+    description: Sets the year of the server, default is year one day one.
+  toggledayweather:
+    description: Toggles whether you enable/disable daytime weather events, default is true
+  togglenightweather:
+    description: Toggles whether you enable/disable nighttime weather events, default is true
